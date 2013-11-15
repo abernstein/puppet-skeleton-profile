@@ -2,7 +2,7 @@
 # This class defines the concept of a profile to manage default shells.
 #
 # == Parameters:
-#
+# $shells  List of shells that should be on the system
 # == Actions:
 #
 # == Requires:
@@ -16,11 +16,9 @@
 #        shells = []
 #      }
 #
-#
 class profile::shells (
   $shells = [ 'bash', 'zsh' ],
 ) {
-  if (validate_array($shells)) {
-    package { $shells: ensure => present, }
-  }
+  validate_array($shells)
+  package { $shells: ensure => present, }
 }

@@ -18,5 +18,6 @@
 class profile::base::packages (
   $proxy = 'http://proxy.puppetlabs.net:3128',
 ) {
-  class { '::epel': proxy => $proxy } -> Package <| |>
+# Example of a declared class:
+# class { '::epel': proxy => $proxy } -> Package <| |>
 }
