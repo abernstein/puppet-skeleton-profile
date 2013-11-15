@@ -20,5 +20,6 @@
 #      }
 #
 class profile::base () inherits profile {
-
+  include profile::shells
+  include profile::base::packages
 }
