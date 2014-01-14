@@ -15,5 +15,5 @@
 #      }
 #
 class profile::users () inherits profile {
-  include profile::users::<username>
+  include profile::users::example
 }
